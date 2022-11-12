@@ -3,8 +3,22 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:background="#f0f0f0"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
+
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/simpli"
+        app:circularflow_radiusInDP="20dp"
+        app:layout_constraintCircleRadius="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
 
 
     <com.google.android.material.button.MaterialButton
@@ -15,29 +29,62 @@
         android:layout_marginBottom="60dp"
         android:text="Sign In"
         app:cornerRadius="16dp"
+        app:backgroundTint="#404040"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent" />
 
+
+    <TextView
+        android:id="@+id/welcome_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="76dp"
+        android:text="Welcome Back Grrom!"
+        android:textSize="24dp"
+        android:textStyle="bold"
+        android:textColor="#a6a6a6"
+        app:layout_constraintBottom_toTopOf="@+id/input_mpin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:layout_constraintVertical_bias="0.414" />
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Input Mpin"
+        android:text="Input MPIN"
+        android:textStyle="italic"
+        android:textFontWeight="900"
         app:layout_constraintBottom_toTopOf="@+id/input_mpin"
         app:layout_constraintEnd_toEndOf="@+id/input_mpin"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/input_mpin" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:textStyle="italic"
+        android:text="@string/forgot_mpin"
+        app:layout_constraintEnd_toEndOf="@+id/input_mpin"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="@+id/input_mpin"
+        app:layout_constraintTop_toBottomOf="@+id/input_mpin" />
 
     <com.google.android.material.textfield.MaterialAutoCompleteTextView
         android:id="@+id/input_mpin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="24dp"
+        android:inputType="number"
         app:layout_constraintBottom_toTopOf="@+id/btn_signin"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.641" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">E Cash</string>
+    <string name="forgot_mpin"><u>Forgot MPIN?</u></string>
 </resources>
