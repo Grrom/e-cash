@@ -8,16 +8,36 @@
     tools:context=".MainActivity">
 
 
-    <ImageView
-        android:id="@+id/imageView"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:src="@drawable/simpli"
-        app:circularflow_radiusInDP="20dp"
-        app:layout_constraintCircleRadius="20dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:gravity="center"
+        app:layout_constraintBottom_toTopOf="@+id/welcome_back"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/ecash"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Space
+            android:layout_width="32dp"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ECASH"
+            android:textSize="32sp"
+            android:textStyle="bold"
+        />
+
+    </LinearLayout>
 
 
 
@@ -25,11 +45,10 @@
         android:id="@+id/btn_signin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginHorizontal="24dp"
+        android:layout_marginHorizontal="54dp"
         android:layout_marginBottom="60dp"
         android:text="Sign In"
         app:cornerRadius="16dp"
-        app:backgroundTint="#404040"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
@@ -49,7 +68,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView"
         app:layout_constraintVertical_bias="0.414" />
 
     <TextView
@@ -78,8 +96,8 @@
         android:id="@+id/input_mpin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginHorizontal="24dp"
-        android:inputType="number"
+        android:layout_marginHorizontal="54dp"
+        android:inputType="numberPassword"
         app:layout_constraintBottom_toTopOf="@+id/btn_signin"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
